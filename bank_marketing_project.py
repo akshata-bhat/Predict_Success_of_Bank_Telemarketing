@@ -226,7 +226,9 @@ parameter_grid = [{'kernel': ['rbf'], 'gamma': [1e-3, 1e-4], 'C': [1, 10, 100]},
 [1, 10, 100]}]
 confusion_mat, y_prediction, y_test, AUC_score = run_classifier(classifier_names[1], clf,
 parameter_grid, X_train, y_train, X_test, y_test)
-obtain_plots(confusion_mat, classifier_names[1], y_prediction, y_test, AUC_score)# Naive Bayes Classifier
+obtain_plots(confusion_mat, classifier_names[1], y_prediction, y_test, AUC_score)
+
+# Naive Bayes Classifier
 clf = GaussianNB()
 parameter_grid = {}
 confusion_mat, y_prediction, y_test, AUC_score =
