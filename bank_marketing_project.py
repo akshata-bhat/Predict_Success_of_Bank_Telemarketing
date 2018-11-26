@@ -106,7 +106,8 @@ def standardizing_data(X_train, X_test):
 def run_classifier(cf_name, cf_model, parameters, X_train, y_train, X_test, y_test):
   print("Performing classification using ", cf_name, " ...")
   label_names = ['yes', 'no']
-  #Performing Cross ValidationCV_type = GridSearchCV(estimator=cf_model, param_grid=parameters, cv=5)
+  #Performing Cross Validation
+  CV_type = GridSearchCV(estimator=cf_model, param_grid=parameters, cv=5)
   CV_type.fit(X_train, y_train)
   print(np.shape(X_train))
   print(np.shape(y_train))
